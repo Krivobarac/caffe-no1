@@ -3,14 +3,19 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: rgba(128, 128, 128, .5);
+    background-color: rgb(0, 0, 0);
     color: #FFF;
     justify-content: center;
     align-items: center;
     text-align: center;
-    row-gap: 2rem;
 
     #contact-section {
+        background-image: url(../../../assets/img/coffee-beer.jpg);
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         display: flex;
         flex-direction: column;
         padding: 5rem;
