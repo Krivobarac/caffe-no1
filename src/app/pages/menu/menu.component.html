@@ -1,1 +1,117 @@
-<p>menu works!</p>
+<div id="menu-links">
+    <div class="menu-link" (click)="setMenuCat('pice')">Piće</div>
+    <div class="menu-link" (click)="setMenuCat('hrana')">Hrana</div>
+</div>
+
+<section class="menu-section" *ngIf="menuCat === 'pice'">
+    <div class="category">
+        <ul>
+            <li>Kafe</li>
+            <li>
+                <ul>
+                    <li>Domaca kafa - 100,00 din</li>
+                    <li>Nes kafa - 140,00 din</li>
+                    <li>Espresso kratki - 110,00 din</li>
+                    <li>Espresso dugi - 130,00 din</li>
+                    <li>Espresso sa mlekom - 140,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Zestina</li>
+            <li>
+                <ul>
+                    <li>Rakija - 100,00 din</li>
+                    <li>Vinjak - 120,00 din</li>
+                    <li>Gin - 130,00 din</li>
+                    <li>Viski - 180,00 din</li>
+                    <li>Votka - 150,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Pivo</li>
+            <li>
+                <ul>
+                    <li>Lav pivo - 100,00 din</li>
+                    <li>Tuborg - 120,00 din</li>
+                    <li>Bavaria - 140,00 din</li>
+                    <li>Toceni Lav mali - 90,00 din</li>
+                    <li>Toceni lav veliki - 140,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Dodaci</li>
+            <li>
+                <ul>
+                    <li>Mleko - 40,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="menu-section" *ngIf="menuCat === 'hrana'">
+    <div class="category">
+        <ul>
+            <li>Pizza</li>
+            <li>
+                <ul>
+                    <li>Margarita - 700,00 din</li>
+                    <li>Kapricossa - 900,00 din</li>
+                    <li>Vulkan - 1200,00 din</li>
+                    <li>4 sira - 1100,00 din</li>
+                    <li>Pizza sendvic - 430,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Sendvic</li>
+            <li>
+                <ul>
+                    <li>Djacki sendvic - 120,00 din</li>
+                    <li>Sunka sendvic - 150,00 din</li>
+                    <li>Suvi Vrat sendvic - 160,00 din</li>
+                    <li>Kulen sendvic - 180,00 din</li>
+                    <li>Pizza sendvic - 2000,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Rostilj</li>
+            <li>
+                <ul>
+                    <li>Mala Pljeskavica - 150,00 din</li>
+                    <li>Velika Pljeskavica - 190,00 din</li>
+                    <li>Gurmanska - 220,00 din</li>
+                    <li>Belo meso - 220,00 din</li>
+                    <li>Batak - 250,00 din</li>
+                    <li>Rostiljska kobasica - 210,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="category">
+        <ul>
+            <li>Salate</li>
+            <li>
+                <ul>
+                    <li>Paradajz - 40,00 din</li>
+                    <li>Grcka salata - 40,00 din</li>
+                    <li>Pileca salata - 50,00 din</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
