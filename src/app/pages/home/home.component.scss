@@ -4,13 +4,7 @@
 }
 
 #home-section {
-    background-color: gray;
-    background-image: url(../../../assets/img/home-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 100%;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +28,12 @@
 }
 
 #home-section::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(128, 128, 128, .3);
+    // content: "";
+    // display: block;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // background-color: rgba(128, 128, 128, .3);
 }
