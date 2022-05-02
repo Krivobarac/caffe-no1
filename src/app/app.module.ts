@@ -18,7 +18,7 @@ import { MenuComponent } from './pages/menu/menu.component';
     MenuComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
   ],
   providers: [],
   bootstrap: [AppComponent]
