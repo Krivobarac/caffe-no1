@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    this.setGoogleMap();
+   this.setGoogleMap();
   }
 
   setGoogleMap() {
