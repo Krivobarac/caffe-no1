@@ -2,3 +2,24 @@
     display: flex;
     column-gap: 2rem;
 }
+
+a {
+    font-family: "KGBlankSpaceSketch", sans-serif;
+    font-size: 3rem;
+    // color: #AF977B;
+    color: #ca8b42;
+    transition: text-decoration color .5s;
+}
+
+a::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #b67f40;
+    transition: .3s;
+  }
+
+a:hover::after {
+    width: 100%;
+}

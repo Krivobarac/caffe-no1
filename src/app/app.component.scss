@@ -1,29 +1,45 @@
 :host {
     height: 100%;
-}
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 
-main {
-    height: 100%;
-
-    #home {
-        background-image: url(../assets/img/home-bg.jpg);
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
+    
+    main {
+        height: 100%;
+    
+        #home {
+            background-image: url(../assets/img/home-bg.jpg);
+        }
+    
+        .paralax {
+            background-color: #000;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-    .paralax {
-        background-color: gray;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
+        #paralax-2 {
+            // background-image: url(../assets/img/coffee-beer.jpg);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    #paralax-2 {
-        background-image: url(../assets/img/coffee-beer.jpg);
-        height: 60%;
+            h3 {
+                width: max-content;
+                font-size: 10rem;
+                color: orangered;
+            }
+        }
+    
+        #paralax-3 {
+            background-image: url(../assets/img/coffee-beer.jpg);
+            height: 100%;
+        }
     }
 }
+

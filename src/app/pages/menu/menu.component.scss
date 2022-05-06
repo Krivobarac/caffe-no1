@@ -5,6 +5,7 @@
     width: 100%;
     padding: 5rem;
     color: #FFF;
+    background-image: url(./../../../assets/img/black-table-background-1.jpg);
 
     #menu-links {
         padding: 10rem;
@@ -15,8 +16,17 @@
         font-size: 2.5rem;
     }
 
-    .menu-link:hover {
-        text-decoration: underline;
+    .menu-link::after {
+        content: '';
+        width: 0px;
+        height: 2px;
+        display: block;
+        background: #FFF;
+        transition: .3s;
+    }
+    
+    .menu-link:hover::after {
+        width: 100%;
     }
 
     .menu-section  {
@@ -27,25 +37,30 @@
 
         .category {
             margin: auto;
-            font-size: 2.5rem;
             min-width: 34%;
             height: min-content;
-            
         }
 
         .category > ul {
             padding: 0;
             margin: 0 auto;
+            
+        }
+
+        .category .cat {
+            font-family: "RumRaisin-Regular";
+            line-height: 5rem;
+            letter-spacing: .3rem;
+            font-size: 2.2rem;
         }
 
         .category ul {
             list-style: none;
             // width: max-content;
-            
         }
 
         .category li {
-            font-size: 2rem;
+            font-size: 1.4rem;
         }
     }
 }
