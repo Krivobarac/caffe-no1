@@ -18,10 +18,15 @@ html {
 
 body {
     background-color: black;
+    overflow: hidden;
+    font-family: "KGBlankSpaceSolid";
+    letter-spacing: .2rem;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    color: #FFF;
 }
 
 a {
-    color: #FFF;
-    font-size: 2.5rem;
     text-decoration: none;
+    color: #FFF;
 }
