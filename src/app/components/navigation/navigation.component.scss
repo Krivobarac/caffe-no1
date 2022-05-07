@@ -14,13 +14,17 @@
         width: 0px;
         height: 2px;
         display: block;
-        background: #b67f40;
+        background: #b9701c;
         margin-top: .5rem;
         transition: .3s;
     }
     
     a:hover::after {
         width: 100%;
+    }
+    
+    a:hover {
+        color: #db7f15;
     }
 }
 
