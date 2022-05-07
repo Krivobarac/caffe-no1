@@ -11,30 +11,146 @@
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
+    color: #ca8b42;
+    max-width: 80rem;
+    margin: 0 auto;
 
-    h1, h2 {
-        width: 40rem;
+    .caffe-logo {
+        letter-spacing: 0;
+        margin-bottom: 3rem;
+
+        p {
+            font-size: 10rem;
+            line-height: 10.5rem;
+            font-family: "KGBlankSpaceSketch", sans-serif;
+        }
+
+        &> div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        span:first-of-type {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            margin-left: .7rem;
+            margin-top: .3rem;
+        }
+
+        span:last-of-type {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+    }
+
+    h4 {
         text-align: center;
-        color: #FFF;
-        text-shadow: 0px 0px 5px black, 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
-    }
-
-    h1 {
-        font-size: 10rem;
-    }
-
-    h2 {
-        font-size: 3rem;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 }
 
-#home-section::after {
-    // content: "";
-    // display: block;
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // background-color: rgba(128, 128, 128, .3);
+@media screen and (max-width: 768px) {
+    #home-section {
+        .caffe-logo {
+            p {
+                font-size: 8rem;
+                line-height: 8.5rem;
+            }
+    
+            span:first-of-type {
+                font-size: 2rem;
+                line-height: 2rem;
+                margin-left: .4rem;
+            }
+    
+            span:last-of-type {
+                font-size: 4rem;
+                line-height: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :host {
+        padding: 5rem 2rem 2rem;
+    }
+
+    #home-section {
+        .caffe-logo {
+            margin-bottom: 2rem;
+
+            p {
+                font-size: 6rem;
+                line-height: 6.5rem;
+            }
+    
+            span:first-of-type {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+            }
+    
+            span:last-of-type {
+                font-size: 2.7rem;
+                line-height: 2.7rem;
+            }
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #home-section {
+        .caffe-logo {
+            p {
+                font-size: 15vmin;
+                line-height: 16vmin;
+            }
+    
+            span:first-of-type {
+                font-size: 4vmin;
+                line-height: 4vmin;
+            }
+    
+            span:last-of-type {
+                font-size: 7.5vmin;
+                line-height: 7.5vmin;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (orientation : landscape) {
+    :host {
+        padding: 10rem 5rem 2rem;
+    }
+    #home-section {
+        .caffe-logo {
+            margin-bottom: 1rem;
+
+            p {
+                font-size: 15vmin;
+                line-height: 16vmin;
+            }
+
+            span:first-of-type {
+                font-size: 4vmin;
+                line-height: 4vmin;
+            }
+
+            span:last-of-type {
+                font-size: 7vmin;
+                line-height: 7vmin;
+            }
+        }
+
+        h4 {
+            font-size: 3vmin;
+            line-height: 5.5vmin;
+        }
+    }
 }
