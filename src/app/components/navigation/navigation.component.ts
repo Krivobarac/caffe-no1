@@ -9,7 +9,14 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  toggleMobileMenu() {
+    const className = 'menu-open';
+    if (document.body.classList.contains(className)) {
+      document.body.classList.remove(className)
+    } else {
+      document.body.classList.add(className)
+    }
+  }
 }

@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,7 +25,50 @@ body {
     color: #FFF;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: #FFF;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    body.menu-open  {
+        #nav {
+            right: 0;
+        }
+    }
+
+    body.menu-open  {
+        #burger-menu {
+            div {
+                width: 80% !important;
+            }
+
+            div:first-of-type {
+                transform: rotate(45deg) translate(.7rem, 0);
+            }
+
+            div:nth-child(2) {
+                display: none;
+            }
+
+            div:last-of-type {
+                transform: rotate(-45deg) translate(.7rem, 0);
+            }
+        }
+    }
 }
