@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cafe-no1": {
+    "caffe-no1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cafe-no1/browser",
+            "outputPath": "dist/caffe-no1/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cafe-no1:build:production"
+              "browserTarget": "caffe-no1:build:production"
             },
             "development": {
-              "browserTarget": "cafe-no1:build:development"
+              "browserTarget": "caffe-no1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cafe-no1:build"
+            "browserTarget": "caffe-no1:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/cafe-no1/server",
+            "outputPath": "dist/caffe-no1/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -139,12 +139,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "cafe-no1:build:development",
-              "serverTarget": "cafe-no1:server:development"
+              "browserTarget": "caffe-no1:build:development",
+              "serverTarget": "caffe-no1:server:development"
             },
             "production": {
-              "browserTarget": "cafe-no1:build:production",
-              "serverTarget": "cafe-no1:server:production"
+              "browserTarget": "caffe-no1:build:production",
+              "serverTarget": "caffe-no1:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -158,12 +158,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "cafe-no1:build:production",
-              "serverTarget": "cafe-no1:server:production"
+              "browserTarget": "caffe-no1:build:production",
+              "serverTarget": "caffe-no1:server:production"
             },
             "development": {
-              "browserTarget": "cafe-no1:build:development",
-              "serverTarget": "cafe-no1:server:development"
+              "browserTarget": "caffe-no1:build:development",
+              "serverTarget": "caffe-no1:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -171,5 +171,5 @@
       }
     }
   },
-  "defaultProject": "cafe-no1"
+  "defaultProject": "caffe-no1"
 }

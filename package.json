@@ -1,5 +1,5 @@
 {
-  "name": "cafe-no1",
+  "name": "caffe-no1",
   "version": "0.0.0",
   "author": {
     "name": "Krivobarac",
@@ -11,12 +11,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:heroku": "node dist/cafe-no1/server/main.js",
+    "start:heroku": "node dist/caffe-no1/server/main.js",
     "postinstall": "npm run build:ssr",
-    "dev:ssr": "ng run cafe-no1:serve-ssr",
-    "serve:ssr": "node dist/cafe-no1/server/main.js",
-    "build:ssr": "ng build --prod && ng run cafe-no1:server:production",
-    "prerender": "ng run cafe-no1:prerender"
+    "dev:ssr": "ng run caffe-no1:serve-ssr",
+    "serve:ssr": "node dist/caffe-no1/server/main.js",
+    "build:ssr": "ng build --prod && ng run caffe-no1:server:production",
+    "prerender": "ng run caffe-no1:prerender"
   },
   "private": true,
   "dependencies": {
