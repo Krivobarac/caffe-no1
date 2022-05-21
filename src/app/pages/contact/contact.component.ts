@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 
 @Component({
@@ -8,6 +8,8 @@ import { Loader } from '@googlemaps/js-api-loader';
 })
 export class ContactComponent implements OnInit, AfterViewInit {
   @ViewChild('map') mapElement!: ElementRef;
+  @Input() contact!: any;
+  @Input() siteName!: string;
 
   private map!: google.maps.Map;
 

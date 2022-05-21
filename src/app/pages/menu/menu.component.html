@@ -1,9 +1,9 @@
 <div id="menu-links">
-    <div class="menu-link" (click)="setMenuCat('pice')">Piće</div>
-    <div class="menu-link" (click)="setMenuCat('hrana')">Hrana</div>
+    <div class="menu-link" (click)="setMenuCat(menuCategory.DRINK)">Piće</div>
+    <div class="menu-link" (click)="setMenuCat(menuCategory.FOOD)">Hrana</div>
 </div>
 
-<section class="menu-section" *ngIf="menuCat === 'pice'">
+<section class="menu-section" *ngIf="menuCat === menuCategory.DRINK">
     <div class="category">
         <ul>
             <li class="cat">Kafe</li>
@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<section class="menu-section" *ngIf="menuCat === 'hrana'">
+<section class="menu-section" *ngIf="menuCategory.FOOD">
     <div class="category">
         <ul>
             <li class="cat">Pizza</li>

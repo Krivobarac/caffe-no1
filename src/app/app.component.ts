@@ -12,11 +12,14 @@ import { AppService } from './_services/app.service';
 })
 export class AppComponent implements OnInit {
   title = 'caffe-no1';
+  contentData: any;
 
   constructor(
     public appService: AppService
   ) {
-    appService.contentData.subscribe(data => console.log(data));
+    appService.contentData.subscribe(data => {
+      this.contentData = data;
+    });
   }
 
   ngOnInit(): void {

@@ -2,9 +2,22 @@
   <app-header [scrollIntoView]="scrollIntoView"></app-header>
 </header>
 <main>
-  <app-home id="home" class="paralax"></app-home>
-  <app-menu class="paralax" id="menu"></app-menu>
-  <div id="paralax-3" class="paralax"></div>
-  <app-contact id="contact"></app-contact>
+  <ng-container *ngIf="contentData">
+    <app-home id="home" class="paralax"
+      [homeText]="contentData.home_text"
+      [siteName]="contentData.site_name"
+      [siteSubname]="contentData.site_subname"
+      [city]="contentData.contact.City">
+    </app-home>
+    <app-menu class="paralax" id="menu"
+      [drinkMenu]="contentData.drink_menu"
+      [foodMenu]="contentData.food_menu">
+    </app-menu>
+    <div id="paralax-3" class="paralax"></div>
+    <app-contact id="contact"
+      [contact]="contentData.contact"
+      [siteName]="contentData.site_name">
+    </app-contact>
+  </ng-container>
 </main>
 <footer></footer>
