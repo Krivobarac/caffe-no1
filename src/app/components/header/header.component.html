@@ -1,8 +1,8 @@
 <div id="presentation-section">
-    <a href="#home" id="logo">
+    <a href="javascript:void(0)" id="logo" (click)="scrollIntoView('home', '')">
         <img src="../../../assets/img/caffe-no1-logo.svg" alt="Cafe No1 logo">
     </a>
 </div>
 <nav id="nav-section">
-    <app-navigation></app-navigation>
+    <app-navigation [scrollIntoView]="scrollIntoView"></app-navigation>
 </nav>
