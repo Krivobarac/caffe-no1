@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://localhost:4200/',
+  api_service_url : 'http://localhost:1337/',
+  // contentAllString: "http://localhost:1337/api/content?populate=contact&populate=menu.item.item_category.menu_category"
 };
 
 /*

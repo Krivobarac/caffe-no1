@@ -23,8 +23,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
     new Loader(
       {apiKey: 'AIzaSyAD9OAQWMpmOenVt9mE6_5aR0pM6bkh6AY'
     }).load().then(() => {
-      console.log('Loaded Map!');
-
       const mapOptions = {
         center: {
           lat: 45.2380933,

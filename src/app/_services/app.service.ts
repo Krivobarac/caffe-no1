@@ -1,16 +1,21 @@
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AppService {
-  static readonly isBrowser = new BehaviorSubject<boolean>(false);
+  readonly apiServiceString = environment.api_service_url;
+  readonly contentData = new BehaviorSubject<any>(null);
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: string
-  ) { 
-    AppService.isBrowser.next(isPlatformBrowser(this.platformId));
+    @Inject('apiString') public apiString: string,
+    private http: HttpClient
+  ) {
+    this.httpGet(apiString);
+  }
+
+  httpGet(apiString: string) {
+    this.http.get<any>(`${this.apiServiceString}api/${apiString}`).subscribe(data => this.contentData.next(data.data.attributes));
   }
 }
