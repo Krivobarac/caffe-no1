@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MenuDTO } from 'src/app/_models/contentData';
 
 enum MenuCategory {
   FOOD = 'food',
@@ -12,8 +13,8 @@ enum MenuCategory {
 export class MenuComponent implements OnInit {
   menuCategory = MenuCategory;
   menuCat = MenuCategory.DRINK;
-  @Input() drinkMenu!: any;
-  @Input() foodMenu!: any;
+  @Input() drinkMenu!: MenuDTO[];
+  @Input() foodMenu!: MenuDTO[];
 
   constructor() { }
 

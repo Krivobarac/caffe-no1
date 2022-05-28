@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentDataDTO } from './_models/contentData';
 import { AppService } from './_services/app.service';
 
 @Component({
@@ -12,13 +13,13 @@ import { AppService } from './_services/app.service';
 })
 export class AppComponent implements OnInit {
   title = 'caffe-no1';
-  contentData: any;
+  contentData!: ContentDataDTO;
 
   constructor(
     public appService: AppService
   ) {
     appService.contentData.subscribe(data => {
-      this.contentData = data;
+      this.contentData = data as ContentDataDTO;
     });
   }
 

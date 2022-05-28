@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:4200/',
   api_service_url : 'http://localhost:1337/',
-  // contentAllString: "http://localhost:1337/api/content?populate=contact&populate=menu.item.item_category.menu_category"
+  // api_service_url : 'https://caffe-no1-cms.herokuapp.com/'
 };
 
 /*
