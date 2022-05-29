@@ -1,5 +1,7 @@
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import localeSr from '@angular/common/locales/sr';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -8,6 +10,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
+
+registerLocaleData(localeSr);
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { MenuComponent } from './pages/menu/menu.component';
     HttpClientModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'sr-RS' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

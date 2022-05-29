@@ -1,66 +1,246 @@
 :host {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    padding: 5rem;
+    padding: 0 2rem;
     color: #FFF;
     background-image: url(./../../../assets/img/black-table-background-1.jpg);
+    position: relative;
+}
 
-    #menu-links {
-        padding: 10rem;
-        display: flex;
-        justify-content: center;
-        column-gap: 3rem;
-        cursor: pointer;
-        font-size: 2.5rem;
-    }
+#menu-links {
+    width: max-content;
+    margin: 2rem 0 5rem;
+    display: flex;
+    column-gap: 3rem;
+    z-index: 5;
+    position: sticky;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 
-    .menu-link::after {
-        content: '';
-        width: 0px;
-        height: 2px;
-        display: block;
-        background: #FFF;
-        transition: .3s;
-    }
+    .menu-link {
+        .drink, .food {
+            background-size: cover;
+            cursor: pointer;
+            transition: all .3s;
+            position: relative;
+            z-index: 2;
+        }
     
-    .menu-link:hover::after {
-        width: 100%;
+        .drink {
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-top: .25rem;
+            background-image: url(./../../../assets/img/wine.svg);
+        }
+    
+        .drink.active {
+            width: 5rem;
+            height: 5rem;
+            margin-top: 0;
+            background-image: url(./../../../assets/img/wine-color.png);
+        }
+            
+        .food {
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-top: .25rem;
+            background-image: url(./../../../assets/img/pizza.svg);
+        }
+    
+        .food.active {
+            width: 5rem;
+            height: 5rem;
+            margin-top: 0;
+            background-image: url(./../../../assets/img/pizza-color.png);
+        }
+    }
+}
+
+.menu-section  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    
+    .category {
+        opacity: 0;
+        min-width: 34%;
+        position: relative;
+        padding: 1.5rem;
+        border: 1px solid #CA8842;
+        border-radius: 15px 255px 15px 255px/255px 15px 255px 15px;
+        background-color: rgba(202, 136, 66, 0.2);
+        animation-name: categoryVisibilityAnimation;
+        animation-duration: .3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    .category > ul {
+        padding: 0;
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    .category .cat {
+        font-family: "RumRaisin-Regular";
+        line-height: 2.2rem;
+        letter-spacing: .3rem;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .category ul {
+        list-style: none;
+    }
+
+    .category li {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+
+    .category li > ul > li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    @keyframes categoryVisibilityAnimation {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #menu-links {
+        left: 47%;
+        transform: translateX(-47%);
+        column-gap: 2rem;
     }
 
     .menu-section  {
-        display: flex;
-        margin: auto;
-        flex-wrap: wrap;
-        row-gap: 5rem;
+        padding-bottom: 3rem;
 
         .category {
             margin: auto;
-            min-width: 34%;
-            height: min-content;
+            padding: 3rem;
         }
+    }
+}
 
-        .category > ul {
-            padding: 0;
-            margin: 0 auto;
-            
+@media screen and (max-width: 768px) {
+    #menu-links {
+        padding: 2rem 0;
+        left: 2rem;
+        top: 9rem;
+        margin: 0;
+        flex-direction: column;
+        transform: unset;
+        row-gap: 1rem;
+        z-index: 1;
+
+        .menu-link {
+            display: flex;
+            background-color: rgba(0, 0, 0, .9);
+            width: 6rem;
+            height: 6rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            .food,
+            .drink,
+            .drink.active,
+            .food.active {
+                margin-top: -.5rem;
+                margin-left: .5rem;
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    .menu-section  {
+        margin-top: -13rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu-section  {
+        .category .cat {
+            line-height: 2rem;
+            font-size: 2rem;
+        }
+    
+        .category li {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :host {
+        padding: 0 1rem;
+    }
+
+    #menu-links {
+        left: 1rem;
+        top: 7rem;
+        padding: 1rem 0;
+
+        .menu-link {
+            width: 4.5rem;
+            height: 4.5rem;
+
+            .food,
+            .drink,
+            .drink.active,
+            .food.active {
+                margin-top: -.5rem;
+                margin-left: .5rem;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    
+    .menu-section  {
+        margin-top: -9rem;
+
+        .category {
+            width: 95%;
+            padding: 1.5rem;
         }
 
         .category .cat {
-            font-family: "RumRaisin-Regular";
-            line-height: 5rem;
-            letter-spacing: .3rem;
-            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .category ul {
-            list-style: none;
-            // width: max-content;
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu-section  {
+        .category {
+            width: 100%;
+            padding: 1rem;
         }
 
+        .category .cat {
+            line-height: 1.8rem;
+            font-size: 1.8rem;
+        }
+    
         .category li {
-            font-size: 1.4rem;
+            font-size: .8rem;
+            line-height: .8rem;
         }
     }
 }

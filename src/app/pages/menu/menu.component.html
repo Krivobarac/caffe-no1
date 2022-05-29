@@ -1,115 +1,41 @@
 <div id="menu-links">
-    <div class="menu-link" (click)="setMenuCat(menuCategory.DRINK)">Piće</div>
-    <div class="menu-link" (click)="setMenuCat(menuCategory.FOOD)">Hrana</div>
+    <div class="menu-link">
+        <div class="drink"
+        [ngClass]="{'active': menuCat === menuCategory.DRINK}"
+        (click)="setMenuCat(menuCategory.DRINK)"></div>
+    </div>
+    <div class="menu-link">
+        <div class="food"
+        [ngClass]="{'active': menuCat === menuCategory.FOOD}"
+        (click)="setMenuCat(menuCategory.FOOD)"></div>
+    </div>
 </div>
 
+
 <section class="menu-section" *ngIf="menuCat === menuCategory.DRINK">
-    <div class="category">
+    <div class="category" *ngFor="let menu of drinkMenu">
         <ul>
-            <li class="cat">Kafe</li>
+            <li class="cat">{{menu.item_category}}</li>
             <li>
                 <ul>
-                    <li>Domaca kafa - 100,00 din</li>
-                    <li>Nes kafa - 140,00 din</li>
-                    <li>Espresso kratki - 110,00 din</li>
-                    <li>Espresso dugi - 130,00 din</li>
-                    <li>Espresso sa mlekom - 140,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Zestina</li>
-            <li>
-                <ul>
-                    <li>Rakija - 100,00 din</li>
-                    <li>Vinjak - 120,00 din</li>
-                    <li>Gin - 130,00 din</li>
-                    <li>Viski - 180,00 din</li>
-                    <li>Votka - 150,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Pivo</li>
-            <li>
-                <ul>
-                    <li>Lav pivo - 100,00 din</li>
-                    <li>Tuborg - 120,00 din</li>
-                    <li>Bavaria - 140,00 din</li>
-                    <li>Toceni Lav mali - 90,00 din</li>
-                    <li>Toceni lav veliki - 140,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Dodaci</li>
-            <li>
-                <ul>
-                    <li>Mleko - 40,00 din</li>
+                    <li *ngFor="let item of menu.item">
+                        {{item.item_name}} - {{item.item_price | currency: 'RSD'}}
+                    </li>
                 </ul>
             </li>
         </ul>
     </div>
 </section>
 
-<section class="menu-section" *ngIf="menuCategory.FOOD">
-    <div class="category">
+<section class="menu-section" *ngIf="menuCat === menuCategory.FOOD">
+    <div class="category" *ngFor="let menu of foodMenu">
         <ul>
-            <li class="cat">Pizza</li>
+            <li class="cat">{{menu.item_category}}</li>
             <li>
                 <ul>
-                    <li>Margarita - 700,00 din</li>
-                    <li>Kapricossa - 900,00 din</li>
-                    <li>Vulkan - 1200,00 din</li>
-                    <li>4 sira - 1100,00 din</li>
-                    <li>Pizza sendvic - 430,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Sendvic</li>
-            <li>
-                <ul>
-                    <li>Djacki sendvic - 120,00 din</li>
-                    <li>Sunka sendvic - 150,00 din</li>
-                    <li>Suvi Vrat sendvic - 160,00 din</li>
-                    <li>Kulen sendvic - 180,00 din</li>
-                    <li>Pizza sendvic - 2000,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Rostilj</li>
-            <li>
-                <ul>
-                    <li>Mala Pljeskavica - 150,00 din</li>
-                    <li>Velika Pljeskavica - 190,00 din</li>
-                    <li>Gurmanska - 220,00 din</li>
-                    <li>Belo meso - 220,00 din</li>
-                    <li>Batak - 250,00 din</li>
-                    <li>Rostiljska kobasica - 210,00 din</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <ul>
-            <li class="cat">Salate</li>
-            <li>
-                <ul>
-                    <li>Paradajz - 40,00 din</li>
-                    <li>Grcka salata - 40,00 din</li>
-                    <li>Pileca salata - 50,00 din</li>
+                    <li *ngFor="let item of menu.item">
+                        {{item.item_name}} - {{item.item_price | currency}}
+                    </li>
                 </ul>
             </li>
         </ul>

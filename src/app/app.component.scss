@@ -5,6 +5,7 @@
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 3;
     }
     
     main {
@@ -22,7 +23,7 @@
             background-attachment: fixed;
         }
         
-        #paralax-3 {
+        #paralax {
             background-image: url(../assets/img/coffee-beer.jpg);
             height: 100%;
         }
