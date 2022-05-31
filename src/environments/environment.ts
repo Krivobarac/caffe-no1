@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:4200/',
-  api_service_url : 'http://localhost:1337/',
-  // api_service_url : 'https://caffe-no1-cms.herokuapp.com/'
+  api_service_url : 'http://localhost:1337/'
 };
 
 /*

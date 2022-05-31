@@ -124,10 +124,11 @@
     }
 }
 
-@media screen and (max-width: 1200px) and (orientation : landscape) {
+@media screen and (max-width: 768px) and (orientation : landscape) {
     :host {
         padding: 10rem 5rem 2rem;
     }
+    
     #home-section {
         .caffe-logo {
             margin-bottom: 1rem;
