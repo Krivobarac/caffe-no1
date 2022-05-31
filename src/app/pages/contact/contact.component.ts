@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   setGoogleMap() {
     new Loader(
-      {apiKey: 'AIzaSyAD9OAQWMpmOenVt9mE6_5aR0pM6bkh6AY'
+      {apiKey: 'Api Key'
     }).load().then(() => {
       const mapOptions = {
         center: {
