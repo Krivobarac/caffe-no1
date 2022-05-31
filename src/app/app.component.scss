@@ -14,6 +14,10 @@
         #home {
             background-image: url(../assets/img/home-bg.jpg);
         }
+
+        #contact {
+           @extend #paralax;
+        }
     
         .paralax {
             background-color: #000;
