@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
+import { SecretKey } from 'src/app/_enum/SecretKey';
 import { ContactDTO } from 'src/app/_models/contentData';
 
 @Component({
@@ -24,7 +25,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   setGoogleMap() {
     new Loader(
-      {apiKey: 'Api Key'
+      {apiKey: SecretKey.GOOGLE_API_KEY
     }).load().then(() => {
       const mapOptions = {
         center: {

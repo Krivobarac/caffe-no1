@@ -24,7 +24,7 @@ registerLocaleData(localeSr);
   ],
   imports: [
     HttpClientModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'sr-RS' }
