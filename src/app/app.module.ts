@@ -10,6 +10,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 registerLocaleData(localeSr);
 
@@ -21,6 +22,7 @@ registerLocaleData(localeSr);
     ContactComponent,
     HomeComponent,
     MenuComponent,
+    FooterComponent,
   ],
   imports: [
     HttpClientModule,

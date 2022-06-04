@@ -7,16 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   @Input() scrollIntoView!: (elementId: string, urlStringParam: string) => void
+  className = 'menu-open';
+
   constructor() { }
 
   ngOnInit(): void { }
 
   toggleMobileMenu() {
-    const className = 'menu-open';
-    if (document.body.classList.contains(className)) {
-      document.body.classList.remove(className)
+    if (document.body.classList.contains(this.className)) {
+      this.closeMobileMenu();
     } else {
-      document.body.classList.add(className)
+      document.body.classList.add(this.className);
     }
+  }
+
+  closeMobileMenu() {
+    document.body.classList.remove(this.className);
   }
 }

@@ -1,0 +1,49 @@
+:host {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    padding: 0 5rem;
+    justify-content: space-between;
+    
+    * {
+        color: #ca8b42;
+    }
+
+    .copyright-text,
+    .my-text {
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .heart {
+        color: red;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :host {
+        flex-direction: column;
+        .copyright-text {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    :host {
+        padding: 0 2rem;
+
+        * {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :host { * {
+            font-size: 1.2rem;
+        }
+    }
+}
+
