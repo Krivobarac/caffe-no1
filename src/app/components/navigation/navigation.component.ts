@@ -1,17 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   @Input() scrollIntoView!: (elementId: string, urlStringParam: string) => void
   className = 'menu-open';
-
-  constructor() { }
-
-  ngOnInit(): void { }
 
   toggleMobileMenu() {
     if (document.body.classList.contains(this.className)) {

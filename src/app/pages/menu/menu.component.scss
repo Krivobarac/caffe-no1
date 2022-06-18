@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 0 2rem;
     color: #FFF;
-    background-image: url('./../../../assets/img/black-table-background-1.jpg');
+    background-image: url('./../../../assets/img/black-table-background-1.webp');
     position: relative;
 }
 
@@ -34,28 +34,28 @@
             width: 4.5rem;
             height: 4.5rem;
             margin-top: .25rem;
-            background-image: url(./../../../assets/img/wine.svg);
+            background-image: url('./../../../assets/img/wine.svg');
         }
     
         .drink.active {
             width: 5rem;
             height: 5rem;
             margin-top: 0;
-            background-image: url(./../../../assets/img/wine-color.png);
+            background-image: url('./../../../assets/img/wine-color.png');
         }
             
         .food {
             width: 4.5rem;
             height: 4.5rem;
             margin-top: .25rem;
-            background-image: url(./../../../assets/img/pizza.svg);
+            background-image: url('./../../../assets/img/pizza.svg');
         }
     
         .food.active {
             width: 5rem;
             height: 5rem;
             margin-top: 0;
-            background-image: url(./../../../assets/img/pizza-color.png);
+            background-image: url('./../../../assets/img/pizza-color.png');
         }
     }
 }

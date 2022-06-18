@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { SecretKey } from 'src/app/_enum/SecretKey';
 import { ContactDTO } from 'src/app/_models/contentData';
@@ -8,16 +8,12 @@ import { ContactDTO } from 'src/app/_models/contentData';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements AfterViewInit {
   @ViewChild('map') mapElement!: ElementRef;
   @Input() contact!: ContactDTO;
   @Input() siteName!: string;
 
   private map!: google.maps.Map;
-
-  constructor() { }
-
-  ngOnInit(): void { }
 
   ngAfterViewInit(): void {
    this.setGoogleMap();
