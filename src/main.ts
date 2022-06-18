@@ -17,5 +17,5 @@ function bootstrap() {
 if (document.readyState === 'complete') {
   bootstrap();
 } else {
-  document.addEventListener('DOMContentLoaded', bootstrap);
+  document.addEventListener('DOMContentLoaded', bootstrap, {passive: true});
 }

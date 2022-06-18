@@ -5,6 +5,7 @@
         url("./assets/fonts/KGBlankSpaceSolid.woff") format("woff"),
         url("./assets/fonts/KGBlankSpaceSolid.ttf") format("ttf"),
         url("./assets/fonts/KGBlankSpaceSolid.eot")  format("embeded-opentype");
+    font-display: swap;
 }
 
 @font-face {
@@ -13,6 +14,7 @@
         url("./assets/fonts/KGBlankSpaceSketch.woff") format("woff"),
         url("./assets/fonts/KGBlankSpaceSketch.ttf") format("ttf"),
         url("./assets/fonts/KGBlankSpaceSketch.eot")  format("embeded-opentype");
+    font-display: swap;
 }
 
 * {
