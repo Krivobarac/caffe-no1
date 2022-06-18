@@ -10,19 +10,14 @@ enum MenuCategory {
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
   menuCategory = MenuCategory;
   menuCat = MenuCategory.DRINK;
   @Input() drinkMenu!: MenuDTO[];
   @Input() foodMenu!: MenuDTO[];
 
+
   constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.drinkMenu);
-    console.log(this.foodMenu);
-  }
-
   setMenuCat(cat: MenuCategory) {
     this.menuCat = cat;
   }
