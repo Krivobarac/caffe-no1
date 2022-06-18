@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --extra-webpack-config webpack.partial.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:heroku": "node dist/caffe-no1/server/main.js"
@@ -29,6 +29,8 @@
     "@googlemaps/js-api-loader": "^1.14.1",
     "@types/google.maps": "^3.48.7",
     "@types/node": "^12.11.1",
+    "imagemin-webpack-plugin": "^1.5.2",
+    "ngx-build-plus": "^13.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "typescript": "~4.6.2",
