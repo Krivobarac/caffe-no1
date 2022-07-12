@@ -19,7 +19,7 @@
             <li>
                 <ul>
                     <li *ngFor="let item of menu.item">
-                        {{item.item_name}} - {{item.item_price | currency: 'RSD'}}
+                        {{item.item_name}} - {{item.item_price | currency: 'RSD' : 'symbol' : '2.2'}}
                     </li>
                 </ul>
             </li>
@@ -34,7 +34,7 @@
             <li>
                 <ul>
                     <li *ngFor="let item of menu.item">
-                        {{item.item_name}} - {{item.item_price | currency}}
+                        {{item.item_name}} - {{item.item_price | currency: 'RSD' : 'symbol' : '2.2'}}
                     </li>
                 </ul>
             </li>

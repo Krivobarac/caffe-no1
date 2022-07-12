@@ -131,6 +131,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    :host {
+        background-image: url('./../../../assets/img/r_black-table-background-1.webp');
+    }
+
     #menu-links {
         padding: 2rem 0;
         left: 2rem;
